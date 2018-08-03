@@ -1,0 +1,15 @@
+.top-page {
+  background-image: url("https://cdn.glitch.com/99473d57-ca95-47ba-b8bb-bc65a0761f74%2FmainNobuoUematsu.jpg?1533221840378");  
+  background-size: cover;
+  height: 800px;
+  z-index: -1;
+}
+
+.main-section {
+  margin: 25px 50px 0px 50px;
+}
+
+.navbar {
+  z-index: 1000;
+  opacity: 1;
+}
