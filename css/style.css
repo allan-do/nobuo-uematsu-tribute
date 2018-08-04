@@ -3,10 +3,11 @@
   background-size: cover;
   height: 720px;
   z-index: -1;
+  overflow: hidden;
 }
 
 .main-section {
-  padding: 25px 50px 25px 50px;
+  padding: 50px 50px 25px 50px;
 }
 
 .navbar {
