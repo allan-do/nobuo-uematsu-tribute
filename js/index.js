@@ -4,12 +4,11 @@
 const historyList = [
                     "1959 - Nobuo Uematsu is born in Kochi, Kochi Prefecture, Japan",
                      "1985 - Joins Square to begin on his first project, Cruise Chaser", 
-  "1987 - Collaborated with Sakaguchi on Final Fantasy",
-  
+                    "1987 - Collaborated with Sakaguchi on Final Fantasy",
                     "1994 - Signed to complete Chrono Trigger soundtrack after Yasunori Mitsuda required medical attention",
                      "2004 - Uematsu leaves Square to begin his freelancing work",
                     "2006 - Created Dog Ear Records",
-  "2008 - Created the main theme for Super Smash Bros. Brawl"
+                    "2008 - Created the main theme for Super Smash Bros. Brawl"
                     ];
 
 const UnorderedList = ({ items }) => {
@@ -29,7 +28,7 @@ const Footer = () => {
       <h3>
         If you have time, you should read more about this incredible human being on his <a className="link" href="https://en.wikipedia.org/wiki/Nobuo_Uematsu" target="_blank">Wikipedia entry</a>.
       </h3>
-      <p>Written and coded by <a className="link" target="_blank" href="https://github.com/allan-do">Allan Do</a>.</p>
+      <p>Coded by <a className="link" target="_blank" href="https://github.com/allan-do">Allan Do</a>. Information source from Wikipedia.</p>
     </div>
   );
 }
@@ -37,7 +36,7 @@ const Footer = () => {
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <a class="navbar-brand" href="http://www.dogearrecords.com/">Official Site</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -75,15 +74,17 @@ function App() {
           
         </section>
         <section id='Timeline' className='main-section'>
-          <header>
-            <h2>Timeline</h2>
-          </header>
-          <div className='grid2x1'>
-            <div>
-              <UnorderedList items={historyList} />
-            </div>
-            <div>
-               <img className="rounded" alt="Uematsu jamming on a keyboard" src="https://cdn.glitch.com/99473d57-ca95-47ba-b8bb-bc65a0761f74%2FtimeLineNobuo.jpg?1533339211333" height="199" width="375"></img>
+          <div className="section-box">
+            <header>
+              <h2>Timeline</h2>
+            </header>
+            <div className='grid2x1'>
+              <div>
+                <UnorderedList items={historyList} />
+              </div>
+              <div>
+                 <img className="rounded" alt="Uematsu jamming on a keyboard" src="https://cdn.glitch.com/99473d57-ca95-47ba-b8bb-bc65a0761f74%2FtimeLineNobuo.jpg?1533339211333" height="199" width="375"></img>
+              </div>
             </div>
           </div>
         </section>
@@ -107,6 +108,20 @@ function App() {
     </div>
   );
 }
+
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top}, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
 
 const application = <App />;
 const main = document.getElementById('root');
