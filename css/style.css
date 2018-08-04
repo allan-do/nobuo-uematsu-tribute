@@ -1,15 +1,65 @@
 .top-page {
   background-image: url("https://cdn.glitch.com/99473d57-ca95-47ba-b8bb-bc65a0761f74%2FmainNobuoUematsu.jpg?1533221840378");  
   background-size: cover;
-  height: 800px;
+  height: 720px;
   z-index: -1;
 }
 
 .main-section {
-  margin: 25px 50px 0px 50px;
+  padding: 25px 50px 25px 50px;
 }
 
 .navbar {
   z-index: 1000;
   opacity: 1;
+  color: white;
+  background-color: rgb(141,36,33);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.nav-link, .navbar-brand, .nav-link:hover, .navbar-brand:hover, .link, .link:hover  {
+  text-decoration: none;
+  color: white; 
+}
+
+.grid2x1 {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+}
+
+.grid2x1 > div {
+  display: flex;   
+  flex: 0 0 50%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rounded {margin: auto;}
+
+#Timeline {
+  color: white;
+  background-color: rgb(141,36,33);
+}
+
+#quote {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.5em;
+  color: rgb(141,36,33);
+}
+
+#quoteAuth {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(141,36,33);
+}
+
+
+#footer{
+  padding-bottom: 5px;
+  background-color: rgb(141,36,33);
+  color: white;
 }
